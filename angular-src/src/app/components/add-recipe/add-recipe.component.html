@@ -1,0 +1,19 @@
+<div>
+  <h2 class="page-header">Add Recipe</h2>
+  <form #recipeForm="ngForm" (submit)="onCreate(recipeForm.value)" >
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name" placeholder="Enter Name">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea [(ngModel)]="description" name="description" class="form-control" id="description" >Enter recipe description</textarea>
+    </div>
+    <div class="form-group">
+      <label for="directions">Directions</label>
+      <textarea  [(ngModel)]="directions" name="directions" class="form-control" id="directions">Enter recipe directions></textarea>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit">
+  </form>
+</div>
+  

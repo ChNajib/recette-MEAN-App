@@ -1,0 +1,32 @@
+<div *ngIf="router.url === '/'">
+  <div class="col-sm-6"*ngFor="let item of recApi.recepies , let i = index " style="margin-top:10px;">
+      <div class="card" style="width:400px">
+          <img class="card-img-top" src="https://www.tasteofhome.com/wp-content/uploads/2017/10/exps91214_HCK163687B09_02_2b-1024x1024.jpg" alt="Card image"/>
+        <div class="card-body">
+          <h4 class="card-title">{{item.name}}</h4>
+          <p class="card-text">{{item.description}}</p>
+          <!--un fois on click sur ce boutton , 
+            on ai redirigé directement vers la page des details de la recette specifiée-->
+          <a href="#" class="btn btn-primary" [routerLink]="['/:item._id/detail']">See details</a>
+        </div>
+      </div>
+  </div>
+  <br/>
+</div>
+
+
+<div *ngIf="router.url === '/dashboard'">
+  <div class="col-sm-6"*ngFor="let item of recApi.recepies ">
+    <!--teste si l'utilisateur courrent est le meme créateur de la recette ,
+       on a essayé beaucoup de syntaxes mais ca ne marche pas-->
+    <div *ngIf="item.owner ==='userId'">
+      <div class="card" style="width:400px">
+        <div class="card-body">
+          <h4 class="card-title">{{item.name}}</h4>
+          <p class="card-text">{{item.description}}</p>
+          <a href="#" class="btn btn-primary">See details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

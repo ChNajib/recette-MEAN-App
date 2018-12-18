@@ -1,0 +1,39 @@
+<html>
+
+    
+<section class="about">
+  <!-- Page Content -->
+  <div class="container" ng-init="let item = recApi.selectedRecipe">
+     <div class="row">
+         <div class="col-lg-6 col-sm-12" data-aos="fade-right" data-aos-delay="300">
+            <a href="#" class="d-block">
+              <img class="img-fluid img-thumbnail" src="#" alt="about-bg">
+            </a>
+         </div>
+         <div class="col-lg-6 col-sm-12">
+            <div class="row" data-aos="fade-left" data-aos-delay="500">
+                <div class="col-sm-12">
+                    <h2>About <span>Feast</span></h2>
+                    <p>{{item.description}}</p>
+                    <p>{{item.directions}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="700">
+                    <ul>
+                    </ul>
+                </div>
+              
+            </div>
+            <div class="row">
+                <div class="col-sm-12" data-aos="fade-up" data-aos-delay="700">
+                   
+                </div>
+            </div>
+         </div>
+     </div>
+  </div>
+  <!-- /.container -->
+</section>
+
+</html>
