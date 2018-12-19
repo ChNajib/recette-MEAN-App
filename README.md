@@ -1,3 +1,5 @@
+Done CHAOUI Najib & EL WAFI Anouar
+
 # Recette-MEAN-app
 
 Complete Recette MEAN stack application with authentication using json web tokens
